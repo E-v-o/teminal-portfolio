@@ -90,16 +90,9 @@ class Terminal extends Component {
     switch(command) {
       case 'about':
         output = `
-I'm a software engineer based in New York City with a passion for technology. I
-work mainly in the web development industry, though I have worked in distributed
-systems / blockchain as well. My current favorite language is Elixir as it
-offers a functional programming paradigm with a syntax which resembles Ruby, and
-makes concurrent programming easy.
-
-GitHub: https://github.com/alexdovzhanyn
-Twitter: https://twitter.com/alexdovzhanyn`
+Coming soon`
         break
-      case 'skills':
+      case 'skills56788795785567567':
         output = `
 LANGUAGES        FRAMEWORKS        DATABASE        OTHER
 
@@ -110,10 +103,16 @@ PHP              Sass              LevelDB         Git
 Javascript       Phoenix
 `
         break
-      case 'projects':
+      case 'projects657887006787978':
         output = `
 elixium    seven_deadly_sins    zephyre    devrant_gem    essence
 pico    alchemy_vm
+`
+        break
+      case 'contact':
+        output = `
+CONTACT METHOD   CONTACT INFO
+Email            hello@evoc.me
 `
         break
       default:
@@ -131,16 +130,17 @@ pico    alchemy_vm
   componentDidMount() {
     this.terminal.current.focus()
     this.write(`
-Welcome to my website. Type one of the following commands to explore:
+Loaded Evoc.me landing page, available commands:
 
 COMMAND         DESCRIPTION
 
-about           outputs a short blurb about me
-projects        projects that I have worked on
-project <name>  shows details about a specific project
-skills          lists languages and skills that I have learned
+about           Find out about me
+contact         How to contact me
     `)
   }
+//projects        projects that I have worked on
+//project <name>  shows details about a specific project
+//skills          lists languages and skills that I have learned
 
   render() {
     return (
@@ -168,7 +168,7 @@ skills          lists languages and skills that I have learned
             <button onClick={ this.toggleWidth } className="toggle"/>
           </div>
 
-          <p>./alexdovzhanyn.sh</p>
+          <p>./evoc.sh</p>
         </div>
         <div className="body" ref={ this.terminalBody }>
           <pre>{ this.state.terminalText }</pre>
