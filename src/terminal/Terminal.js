@@ -168,7 +168,7 @@ contact         How to contact me
             <button onClick={ this.toggleWidth } className="toggle"/>
           </div>
 
-          <p>./evoc.sh</p>
+          <p>./evoc.me</p>
         </div>
         <div className="body" ref={ this.terminalBody }>
           <pre>{ this.state.terminalText }</pre>
